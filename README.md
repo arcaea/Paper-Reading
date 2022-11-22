@@ -1,5 +1,5 @@
 # Paper-Reading
-Paper：Portfolio Choice Based on Third-Degree Stochastic Dominance
+Paper：Rare Events Analysis for High‐Frequency Equity Data
 
 .............. \
 
@@ -62,8 +62,26 @@ Date=list(data_s.iloc[:,2])#將Date存在Date中
 ## 流程6-設定V0
 任意設定一個V0值，做了2個V0測試(V0取平均值與V0取5%以下的最低值)
 ```python
-# V0=np.mean(Volume)# V0取平均值
-V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]# V0取5%以下的最低值
+# V0=np.mean(Volume)#V0取平均值
+V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]#V0取5%以下的最低值
 
-print("V0="+str(V0))
+print("V0="+str(V0))#輸出V0的值
+```
+## 流程7-
+
+```python
+var_k=[]#建立空字串-儲存S<sub>n<\sub>-
+var_date=[]#建立空字串
+n=len(data_s)-1
+
+for i in range(0,n):
+  s=0
+  for j in range(i):
+    s=s+Volume[j]
+    if(s<V0):
+      var_k.append(Close[n]-Close[i])
+      var_date.append([Date[n],Date[i]])
+
+print(var_k)
+print(var_date)
 ```
