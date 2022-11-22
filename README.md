@@ -85,7 +85,7 @@ for i in range(0,n):#所有日期
 print(var_k)#顯示所有的Sn-Sj
 print(var_date)#顯示所有的Sn日期和Sj日期
 ```
-## 流程7-找出S<sub>n</sub>-S<sub>j</sub>的值、S<sub>n</sub>日期和S<sub>j</sub>日期
+## 流程-找出S<sub>n</sub>-S<sub>j</sub>的值、S<sub>n</sub>日期和S<sub>j</sub>日期
 找出S<sub>n</sub>-S<sub>j</sub>裡的最大值與當天的S<sub>n</sub>日期和S<sub>j</sub>日期
 ```python
 print(max(var_k))#Sn-Sj的最大值
