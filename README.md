@@ -43,7 +43,7 @@ ticker="AAPL" #APPLE市場數據
 enddate=datetime.strptime('2022/11/15','%Y/%m/%d').date() #截止日期
 startdate=(enddate-timedelta(days=365)) #起始日期
 
-data=yf.download(tickers=ticker,start=startdate,end=enddate,interval="1d")
+data=yf.download(tickers=ticker,start=startdate,end=enddate,interval="1d")#按每一天時間間隔獲取數據
 
 data.columns #顯示導入結果的欄位
 ```
