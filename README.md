@@ -86,20 +86,10 @@ print(var_k)#顯示所有的Sn-Sj
 print(var_date)#顯示所有的Sn日期和Sj日期
 ```
 ## 流程7-找出S<sub>n</sub>-S<sub>j</sub>的值、S<sub>n</sub>日期和S<sub>j</sub>日期
-找出所有達成V<sub>k</sub>+V<sub>k+1</sub>+...+V<sub>n</sub><V<sub>0</sub>條件下的S<sub>n</sub>-S<sub>j</sub> (k≤j≤n)的值、S<sub>n</sub>日期和S<sub>j</sub>日期
+找出S<sub>n</sub>-S<sub>j</sub>裡的最大值與當天的S<sub>n</sub>日期和S<sub>j</sub>日期
 ```python
-var_k=[]#建立空字串-儲存Sn-Sj
-var_date=[]#建立空字串-儲存Sn的日期與Sj的日期
-n=len(data_s)-1#資料長度
+print(max(var_k))#Sn-Sj的最大值
 
-for i in range(0,n):#所有日期
-  s=0#總和歸0
-  for j in range(i):#在i日期前的所有日期
-    s=s+Volume[j]#總和(Vk+Vk+1+...+Vn)
-    if(s<V0):#判斷是否達成條件
-      var_k.append(Close[n]-Close[i])#將Sn-Sj存入字串
-      var_date.append([Date[n],Date[i]])#將Sn日期和Sj日期存入字串
-
-print(var_k)#顯示所有的Sn-Sj
-print(var_date)#顯示所有的Sn日期和Sj日期
+index = var_k.index(max(var_k))#找出當天日期的索引值
+print(var_date[index])#找出當天日期
 ```
