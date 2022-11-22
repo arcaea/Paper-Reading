@@ -38,3 +38,12 @@ data.columns #顯示導入結果
 data_s = data[['Adj Close','Volume']]
 data_s #顯示導入結果
 ```
+# 流程4-存日期
+將date存進data_s的dataframe裡
+```python
+dates=[] #建立空字串
+for row in data_s.index: 
+  dates.append(str(row)[0:10]) #將data_s的index只有年月日的部分存入dates字串裡
+data_s['Date']=dates #將dates字串裡的資料存進data_s裡
+data_s #顯示導入結果
+```
