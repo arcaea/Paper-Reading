@@ -1,5 +1,5 @@
 # Paper-Reading
-## Paper：Portfolio Choice Based on Third-Degree Stochastic Dominance
+Paper：Portfolio Choice Based on Third-Degree Stochastic Dominance
 
 # 環境
 google colaboratory \
