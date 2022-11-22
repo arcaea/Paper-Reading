@@ -7,7 +7,6 @@ Paper：Rare Events Analysis for High‐Frequency Equity Data
 ## Δp<sub>n</sub>：
 ![image](https://github.com/arcaea/Paper-Reading/blob/main/Pics/max.PNG)
 
-
 # python使用環境
 google colaboratory \
 硬體加速器：None
