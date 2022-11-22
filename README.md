@@ -47,3 +47,10 @@ for row in data_s.index:
 data_s['Date']=dates #將dates字串裡的資料存進data_s裡
 data_s #顯示導入結果
 ```
+# 流程5-
+將date存進data_s的dataframe裡
+```python
+Close=list(data_s.iloc[:,0])#將Close存在Adj Close中
+Volume=list(data_s.iloc[:,1])#將Volumn存在volume中
+Date=list(data_s.iloc[:,2])#將Date存在Date中
+```
