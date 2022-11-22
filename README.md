@@ -8,11 +8,12 @@ Paper：Portfolio Choice Based on Third-Degree Stochastic Dominance
 google colaboratory \
 Hardware accelerator：None
 
-# 流程1-安裝管理套件工具
+# 流程介紹
+## 流程1-安裝管理套件工具
 ```python
 !pip install yfinance
 ```
-# 流程2-匯入模組
+## 流程2-匯入模組
 
 ```python
 import numpy as np
@@ -20,7 +21,7 @@ import pandas as pd
 import yfinance as yf
 from datetime import timedelta,datetime,date
 ```
-# 流程3-導入市場數據
+## 流程3-導入市場數據
 從yahoo財經導入從 2021/11/15 到 2022/11/15 的APPLE市場數據。
 ```python
 ticker="AAPL" #APPLE市場數據
@@ -32,13 +33,13 @@ data=yf.download(tickers=ticker,start=startdate,end=enddate,interval="1d")
 
 data.columns #顯示導入結果
 ```
-# 流程3-將所需資料存進新的dataframe裡
+## 流程3-將所需資料存進新的dataframe裡
 只需Adj Close與Volume的資料，所以將其存進新的變數data_s
 ```python
 data_s = data[['Adj Close','Volume']]
 data_s #顯示導入結果
 ```
-# 流程4-存日期
+## 流程4-存日期
 將date存進data_s的dataframe裡
 ```python
 dates=[] #建立空字串
@@ -47,7 +48,7 @@ for row in data_s.index:
 data_s['Date']=dates #將dates字串裡的資料存進data_s裡
 data_s #顯示導入結果
 ```
-# 流程5-取資料
+## 流程5-取資料
 將data_s的所有資料分別存進新變數裡
 ```python
 Close=list(data_s.iloc[:,0])#將Close存在Adj Close中
