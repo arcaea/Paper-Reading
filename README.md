@@ -16,6 +16,7 @@ Hardware accelerator：None
 ## 流程2-匯入模組
 
 ```python
+import math
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -37,15 +38,18 @@ data.columns #顯示導入結果
 只需Adj Close與Volume的資料，所以將其存進新的變數data_s
 ```python
 data_s = data[['Adj Close','Volume']]
+
 data_s #顯示導入結果
 ```
 ## 流程4-存日期
 將date存進data_s的dataframe裡
 ```python
 dates=[] #建立空字串
+
 for row in data_s.index: 
   dates.append(str(row)[0:10]) #將data_s的index只有年月日的部分存入dates字串裡
 data_s['Date']=dates #將dates字串裡的資料存進data_s裡
+
 data_s #顯示導入結果
 ```
 ## 流程5-取資料
@@ -58,13 +62,8 @@ Date=list(data_s.iloc[:,2])#將Date存在Date中
 ## 流程6-設定V0
 任意設定一個V0值，做了2個V0測試(V0取平均值與V0取5%以下的最低值)
 ```python
-import math
+# V0=np.mean(Volume)# V0取平均值
+V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]# V0取5%以下的最低值
 
-# V0為平均值
-# V0=np.mean(Volume)
-# print("V0="+str(V0))
-
-#V0 take the lowest value under 5%
-V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]
 print("V0="+str(V0))
 ```
