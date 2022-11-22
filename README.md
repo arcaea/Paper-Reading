@@ -44,7 +44,7 @@ data_s #顯示導入結果
 ## 流程4-存日期
 將date存進data_s的dataframe裡
 ```python
-dates=[] #建立空字串
+dates=[] #建立空字串-儲存日期
 
 for row in data_s.index: 
   dates.append(str(row)[0:10]) #將data_s的index只有年月日的部分存入dates字串裡
@@ -59,7 +59,7 @@ Close=list(data_s.iloc[:,0])#將Close存在Adj Close中
 Volume=list(data_s.iloc[:,1])#將Volumn存在volume中
 Date=list(data_s.iloc[:,2])#將Date存在Date中
 ```
-## 流程6-設定V0
+## 流程6-設定V<sub>0</sub>
 任意設定一個V<sub>0</sub>值，做了2個V<sub>0</sub>測試(V<sub>0</sub>取平均值與V<sub>0</sub>取5%以下的最低值)
 ```python
 # V0=np.mean(Volume)#V0取平均值
@@ -70,9 +70,9 @@ print("V0="+str(V0))#輸出V0的值
 ## 流程7-找出S<sub>n</sub>-S<sub>j</sub>的值、S<sub>n</sub>日期和S<sub>j</sub>日期
 找出所有達成V<sub>k</sub>+V<sub>k+1</sub>+V<sub>n</sub><V<sub>0</sub>條件下的S<sub>n</sub>-S<sub>j</sub> (k≤j≤n)的值、S<sub>n</sub>日期和S<sub>j</sub>日期
 ```python
-var_k=[]#建立空字串-儲存Sn-
-var_date=[]#建立空字串
-n=len(data_s)-1
+var_k=[]#建立空字串-儲存Sn-Sj
+var_date=[]#建立空字串-儲存Sn的日期與Sj的日期
+n=len(data_s)-1#資料長度
 
 for i in range(0,n):
   s=0
