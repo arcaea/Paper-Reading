@@ -1,5 +1,5 @@
 # Paper-Reading
-Paper：*Rare Events Analysis for High‐Frequency Equity Data*
+Paper：<strong>Rare Events Analysis for High‐Frequency Equity Data</strong>
 
 # 以程式碼去寫出下圖2個方程式
 ## S<sub>n</sub>-S<sub>j</sub>：
