@@ -68,7 +68,7 @@ V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]#V0取5%以下的最低值
 print("V0="+str(V0))#輸出V0的值
 ```
 ## 流程7-
-
+S<sub>n<\sub>
 ```python
 var_k=[]#建立空字串-儲存S<sub>n<\sub>-
 var_date=[]#建立空字串
