@@ -4,7 +4,7 @@ Paper：Portfolio Choice Based on Third-Degree Stochastic Dominance
 .............. \
 
 
-# 環境
+# python使用環境
 google colaboratory \
 Hardware accelerator：None
 
