@@ -20,8 +20,8 @@ import pandas as pd
 import yfinance as yf
 from datetime import timedelta,datetime,date
 ```
-# 流程3-下載市場數據
-從yahoo財經下載從2021/11/15到2022/11/15的APPLE市場數據。
+# 流程3-導入市場數據
+從yahoo財經導入從 2021/11/15 到 2022/11/15 的APPLE市場數據。
 ```python
 ticker="AAPL" #APPLE市場數據
 
@@ -30,5 +30,5 @@ startdate=(enddate-timedelta(days=365)) #起始日期
 
 data=yf.download(tickers=ticker,start=startdate,end=enddate,interval="1d")
 
-data.columns
+data.columns #顯示導入結果
 ```
