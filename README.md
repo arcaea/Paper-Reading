@@ -32,7 +32,7 @@ data=yf.download(tickers=ticker,start=startdate,end=enddate,interval="1d")
 
 data.columns #顯示導入結果
 ```
-# 流程3-將所需資料存進新的變數
+# 流程3-將所需資料存進新的dataframe裡
 只需Adj Close與Volume的資料，所以將其存進新的變數data_s
 ```python
 data_s = data[['Adj Close','Volume']]
@@ -47,8 +47,8 @@ for row in data_s.index:
 data_s['Date']=dates #將dates字串裡的資料存進data_s裡
 data_s #顯示導入結果
 ```
-# 流程5-
-將date存進data_s的dataframe裡
+# 流程5-取資料
+將data_s的所有資料分別存進新變數裡
 ```python
 Close=list(data_s.iloc[:,0])#將Close存在Adj Close中
 Volume=list(data_s.iloc[:,1])#將Volumn存在volume中
