@@ -1,6 +1,6 @@
 # Paper-Reading
-Paper：<strong>Rare Events Analysis for High‐Frequency Equity Data</strong>
-Author：Dragos Bozdog, Ionut¸ Florescu, Khaldoun Khashanah, and Jim Wang
+Paper：<strong>Rare Events Analysis for High‐Frequency Equity Data</strong> \
+Author：Dragos Bozdog, Ionut¸ Florescu, Khaldoun Khashanah, and Jim Wang \
 Stevens Institute of Technology, e-mail: ifl oresc@stevens.edu
 
 ## 原文片段
