@@ -67,8 +67,8 @@ V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]#V0取5%以下的最低值
 
 print("V0="+str(V0))#輸出V0的值
 ```
-## 流程7-
-找出所有達成V<sub>k</sub>+V<sub>k+1</sub>+V<sub>n</sub><V<sub>0</sub>條件下的S<sub>n</sub>-S<sub>j</sub> (k≤j≤n)的值
+## 流程7-找出S<sub>n</sub>-S<sub>j</sub>的值與其日期
+找出所有達成V<sub>k</sub>+V<sub>k+1</sub>+V<sub>n</sub><V<sub>0</sub>條件下的S<sub>n</sub>-S<sub>j</sub> (k≤j≤n)的值與其日期
 ```python
 var_k=[]#建立空字串-儲存Sn-
 var_date=[]#建立空字串
