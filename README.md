@@ -55,3 +55,16 @@ Close=list(data_s.iloc[:,0])#將Close存在Adj Close中
 Volume=list(data_s.iloc[:,1])#將Volumn存在volume中
 Date=list(data_s.iloc[:,2])#將Date存在Date中
 ```
+## 流程6-設定V0
+任意設定一個V0值，做了2個V0測試(V0取平均值與V0取5%以下的最低值)
+```python
+import math
+
+# V0為平均值
+# V0=np.mean(Volume)
+# print("V0="+str(V0))
+
+#V0 take the lowest value under 5%
+V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]
+print("V0="+str(V0))
+```
