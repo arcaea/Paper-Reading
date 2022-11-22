@@ -1,6 +1,7 @@
 # Paper-Reading
 Paper：Rare Events Analysis for High‐Frequency Equity Data
 
+# 以程式碼去寫出下圖2個方程式
 ## S<sub>n</sub>-S<sub>j</sub>：
 ![image](https://github.com/arcaea/Paper-Reading/blob/main/Pics/Sn-Sj.PNG)
 ## Δp<sub>n</sub>：
@@ -9,7 +10,7 @@ Paper：Rare Events Analysis for High‐Frequency Equity Data
 
 # python使用環境
 google colaboratory \
-Hardware accelerator：None
+硬體加速器：None
 
 # 流程介紹
 ## 流程1-安裝管理套件工具
