@@ -3,7 +3,7 @@ Paper：<strong>Rare Events Analysis for High‐Frequency Equity Data</strong>
 
 # 原文
 A thorough investigation of the distribution of price changes, conditional on cumulative trading window, would involve the evaluation of all observations for each equity (S<sub>n</sub>-S<sub>j</sub> | V<sub>k</sub>+V<sub>k+1</sub>+...+V<sub>n</sub><V<sub>0</sub>) for k ≤ j ≤ n where n runs through all the trades, S<sub>n</sub> is the price, and V<sub>n</sub> is the volume associated with trade n. Although the distribution would be accurate, such a task would involve significant computational effort considering the large database we use. Because we are interested only in the rare events, we chose to select the extreme observations in this sequence and subsequently analyze only a percentage of these observations at the tails of the distribution Δp | V<V<sub>n</sub>. \
-Specifically, we construct the sequence of consecutive trades S<sub>k</sub>+S<sub>k+1</sub>+...+S<sub>n</sub>
+Specifically, we construct the sequence of consecutive trades S<sub>k</sub>,S<sub>k+1</sub>,...,S<sub>n</sub> and their associated volumes V<sub>k</sub>,V<sub>k,1</sub>,...,V<sub>n</sub>such that V<sub>k</sub>+V<sub>k+1</sub>+...+V<sub>n</sub><V<sub>0</sub> and we consider Δp<sub>n</sub>=max{S<sub>n</sub>-S<sub>k</sub>,S<sub>n</sub>-S<sub>k+1</sub>,S<sub>n</sub>-S<sub>n-1</sub>}
 
 # 以程式碼去寫出下圖2個方程式
 ## S<sub>n</sub>-S<sub>j</sub>：
