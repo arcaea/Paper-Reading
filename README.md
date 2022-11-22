@@ -35,7 +35,7 @@ startdate=(enddate-timedelta(days=365)) #起始日期
 
 data=yf.download(tickers=ticker,start=startdate,end=enddate,interval="1d")
 
-data.columns #顯示導入結果
+data.columns #顯示導入結果的欄位
 ```
 ## 流程4-將所需資料存進新的dataframe裡
 只需Adj Close與Volume的資料，所以將其存進新的變數data_s
