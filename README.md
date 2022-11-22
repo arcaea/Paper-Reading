@@ -60,7 +60,7 @@ Volume=list(data_s.iloc[:,1])#將Volumn存在volume中
 Date=list(data_s.iloc[:,2])#將Date存在Date中
 ```
 ## 流程6-設定V0
-任意設定一個V0值，做了2個V0測試(V0取平均值與V0取5%以下的最低值)
+任意設定一個V<sub>0</sub>值，做了2個V<sub>0</sub>測試(V0取平均值與V0取5%以下的最低值)
 ```python
 # V0=np.mean(Volume)#V0取平均值
 V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]#V0取5%以下的最低值
@@ -68,9 +68,9 @@ V0=np.sort(Volume)[math.ceil(len(data_s)*0.05)]#V0取5%以下的最低值
 print("V0="+str(V0))#輸出V0的值
 ```
 ## 流程7-
-S<sub>n<\sub>
+找出所有達成V<sub>k</sub>+V<sub>k+1</sub>+V<sub>n</sub><V<sub>0</sub>條件下的S<sub>n</sub>-S<sub>j</sub>，k≤j≤n的值
 ```python
-var_k=[]#建立空字串-儲存S<sub>n<\sub>-
+var_k=[]#建立空字串-儲存Sn-
 var_date=[]#建立空字串
 n=len(data_s)-1
 
